@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Gratuit | Woldjy Impact Lab</title>
+<link rel="stylesheet" href="style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header">
+  <div class="container nav">
+    <div class="logo">
+      <img src="images/hero/logo.png" alt="Woldjy Impact Lab" class="logo-img">
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="offers.html">Formations</a>
+      <a href="process.html">Processus</a>
+      <a href="audit.html">Audit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="audit.html" class="btn btn-primary">Demander un audit gratuit</a>
+  </div>
+</header>
+
+<!-- HERO AUDIT -->
+<section class="hero-audit" style="background-image: url('images/audit/hero-audit.jpg');">
+  <div class="container hero-content">
+    <h1>Demandez votre audit gratuit</h1>
+    <p>Évaluez votre entreprise, vos besoins et découvrez comment nous pouvons booster vos résultats.</p>
+  </div>
+</section>
+
+<!-- FORMULAIRE AUDIT -->
+<section class="section audit-form">
+  <div class="container">
+    <h2>Formulaire de demande d'audit</h2><p id="successMessage" style="display:none; color:green; font-weight:600;">
+✅ Message envoyé avec succès. Nous vous contacterons rapidement.
+</p>
+    
+    
+    <form action="https://formspree.io/f//xykkzjgr" method="POST">
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" required placeholder="Votre nom">
+      </div>
+      <div class="form-group">
+        <label for="email">Email professionnel</label>
+        <input type="email" id="email" name="email" required placeholder="email@exemple.com">
+      </div>
+      <div class="form-group">
+        <label for="company">Nom de l'entreprise</label>
+        <input type="text" id="company" name="company" placeholder="Nom de votre société">
+      </div>
+      <div class="form-group">
+        <label for="message">Description du projet / besoins</label>
+        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou vos besoins"></textarea>
+      </div>
+      
+      <input type="hidden" name="_subject" value="Nouvelle demande d’audit - Woldjy Impact Lab">
+<input type="hidden" name="_next" value="success.html">
+<input type="hidden" name="_error" value="cancel.html">
+      <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+    </form>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section cta-final">
+  <div class="container center">
+    <h2>Prêt à transformer votre projet en succès avec notre expertise ?</h2>
+    <a href="contact.html" class="btn btn-secondary">Nous contacter directement</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="images/hero/logo.png" alt="Woldjy Impact Lab" class="logo-img">
+      <p>© 2026 Woldjy Impact Lab. Tous droits réservés.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="offers.html">Formations</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: contact@woldjyimpactlab.com</p>
+      <p>Téléphone: +509 42006945</p>
+      <p>Cap-Haïtien, Haïti</p>
+    </div>
+  </div>
+</footer>
+<script>
+  if (window.location.href.includes("success.html")) {
+    document.getElementById("successMessage")?.style.display = "block";
+  }
+</script>
+</body>
+</html>

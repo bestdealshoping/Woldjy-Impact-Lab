@@ -1,0 +1,270 @@
+/* ------------------------------
+   RESET DE BASE
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   CONTENEUR
+--------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ------------------------------
+   HEADER / NAVIGATION
+--------------------------------*/
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav nav a:hover {
+  color: #e63946;
+}
+
+.logo-img {
+  width: 150px;
+}
+
+/* BOUTONS */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #d62839;
+}
+
+.btn-secondary {
+  background-color: #457b9d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #1d3557;
+}
+
+.btn-cta {
+  background-color: #f77f00;
+  color: #fff;
+}
+
+.btn-cta:hover {
+  background-color: #e85d04;
+}
+
+/* ------------------------------
+   HERO SECTIONS
+--------------------------------*/
+.hero-services,
+.hero-formation,
+.hero-process,
+.hero-audit,
+.hero-contact,
+.hero-success,
+.hero-cancel {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------
+   SECTIONS
+--------------------------------*/
+.section {
+  padding: 80px 0;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1d3557;
+}
+
+.section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ------------------------------
+   GRIDS
+--------------------------------*/
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* ------------------------------
+   CARTES / CARDS
+--------------------------------*/
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 250px;
+  margin-bottom: 50px;
+}
+
+/* GROUP BOUTONS DANS LES CARTES */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ------------------------------
+   FORMULAIRES
+--------------------------------*/
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+.footer {
+  background-color: #1d3557;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer a {
+  color: #f1faee;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer a:hover {
+  color: #e63946;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* ------------------------------
+   MEDIA QUERIES
+--------------------------------*/
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .nav nav {
+    display: none; /* pour mobile, tu peux ajouter menu burger plus tard */
+  }
+}
