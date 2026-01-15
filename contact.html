@@ -28,25 +28,33 @@
 </header>
 
 <!-- HERO CONTACT -->
-<section class="hero-contact" style="background-image: url('images/contact/hero-contact.jpg');">
-  <div class="container hero-content">
-    <h1>Contactez-nous</h1>
-    <p>Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
-  </div>
-</section>
-
-<!-- FORMULAIRE CONTACT -->
 <section class="section contact-form">
   <div class="container">
     <h2>Envoyez-nous un message</h2>
-    <form action="success.html" method="POST">
-      <input id="name" placeholder="Votre nom">
-<input id="email" placeholder="Votre email">
-<textarea id="message" placeholder="Votre message"></textarea>
-
-<button class="btn btn-primary" onclick="sendToWhatsApp()">
-  Envoyer le message
-</button>
+  <form action="https://formspree.io/f/xbddlylz"
+      method="POST">
+<p id="successMsg" style="display:none;color:green;font-weight:bold">
+  Message envoyé avec succès.
+</p>
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" required placeholder="Votre nom">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="email@exemple.com">
+      </div>
+      <div class="form-group">
+        <label for="subject">Objet</label>
+        <input type="text" id="subject" name="subject" placeholder="Objet du message">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </div>
 </section>
 
 <!-- COORDONNÉES ET MAP -->
