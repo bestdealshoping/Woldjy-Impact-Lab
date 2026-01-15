@@ -54,27 +54,24 @@ cards.forEach(card => {
 // ------------------------------
 // BOUTONS CTA EFFECT HOVER
 // ------------------------------
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(btn => {
-  btn.addEventListener('mouseenter', () => {
-    btn.style.transform = 'scale(1.05)';
-  });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = 'scale(1)';
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappButtons = document.querySelectorAll(".whatsapp-btn");
+
+  whatsappButtons.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const course = this.getAttribute("data-course");
+      const payment = this.getAttribute("data-payment");
+
+      const phoneNumber = "50942824391"; // ton WhatsApp
+      const message = `Bonjour Woldjy Impact Lab 👋%0A%0AJe souhaite m'inscrire à la formation : *${course}*%0A%0AMoyen de paiement choisi : ${payment}%0A%0AMerci.`;
+
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, "_blank");
+    });
   });
 });
-function sendToWhatsApp() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  const text =
-    "Bonjour, je vous contacte depuis le site Woldjy Impact Lab.%0A" +
-    "Nom: " + name + "%0A" +
-    "Email: " + email + "%0A" +
-    "Message: " + message;
-
-  window.location.href = "https://wa.me/50942824391?text=" + encodeURIComponent(text);}
   
 
 // ------------------------------
