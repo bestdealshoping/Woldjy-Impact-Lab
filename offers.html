@@ -6,6 +6,42 @@
 <title>Formations | Woldjy Impact Lab</title>
 <link rel="stylesheet" href="style.css">
 <script src="js/script.js" defer></script>
+
+<style>
+/* Modal CSS minimal pour pop-up */
+.modal-form {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center; align-items: center;
+  z-index: 9999;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function openForm(id){
+  document.getElementById(id).style.display = 'flex';
+}
+function closeForm(id){
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+
 </head>
 <body>
 
@@ -40,98 +76,99 @@
   <div class="container">
     <h2>Formations Populaires</h2>
     <div class="grid-3">
+
       <!-- Cours 1 -->
       <div class="card course-card">
         <img src="images/offers/course1.jpg" alt="Marketing Digital Avancé">
         <h3>Marketing Digital Avancé</h3>
         <p>Niveau: Intermédiaire | Durée: 6 semaines</p>
         <p>Apprenez à créer des campagnes publicitaires performantes et optimiser votre présence digitale.</p>
-       <form action="https://formspree.io/f/xlggdovn" method="POST" class="inscription-form">
-
-  <!-- Infos formation (cachées) -->
-  <input type="hidden" name="formation" value="Marketing Digital Avancé">
-  <input type="hidden" name="niveau" value="Intermédiaire">
-  <input type="hidden" name="duree" value="6 semaines">
-
-  <!-- Champ NOM -->
-  <div class="form-group">
-    <input type="text" name="nom" placeholder="Votre nom complet" required>
-  </div>
-
-  <!-- Champ CONTACT -->
-  <div class="form-group">
-    <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
-  </div>
-
-  <!-- Bouton -->
-  <button type="submit" class="btn btn-secondary">
-    S’inscrire
-  </button>
-
-</form>
+        <button class="btn btn-secondary" onclick="openForm('form1')">S’inscrire</button>
       </div>
+
       <!-- Cours 2 -->
       <div class="card course-card">
         <img src="images/offers/course2.jpg" alt="Développement Web">
         <h3>Développement Web</h3>
         <p>Niveau: Débutant | Durée: 8 semaines</p>
         <p>Maîtrisez HTML, CSS, JavaScript et créez votre premier site web professionnel.</p>
- <form action="https://formspree.io/f/xlggdovn" method="POST" class="inscription-form">
+        <button class="btn btn-secondary" onclick="openForm('form2')">S’inscrire</button>
+      </div>
 
-  <!-- Infos formation (cachées) -->
-  <input type="hidden" name="formation" value="Développement Web">
-  <input type="hidden" name="niveau" value="Débutant">
-  <input type="hidden" name="duree" value="8 semaines">
-
-  <!-- Champ NOM -->
-  <div class="form-group">
-    <input type="text" name="nom" placeholder="Votre nom complet" required>
-  </div>
-
-  <!-- Champ CONTACT -->
-  <div class="form-group">
-    <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
-  </div>
-
-  <!-- Bouton -->
-  <button type="submit" class="btn btn-secondary">
-    S’inscrire
-  </button>
-
-</form>
       <!-- Cours 3 -->
       <div class="card course-card">
         <img src="images/offers/course3.jpg" alt="Stratégie B2B et Growth">
         <h3>Stratégie B2B et Growth</h3>
         <p>Niveau: Avancé | Durée: 4 semaines</p>
         <p>Apprenez les techniques de croissance et stratégies B2B pour booster votre entreprise.</p>
-       <form action="https://formspree.io/f/xlggdovn" method="POST" class="inscription-form">
-
-  <!-- Infos formation (cachées) -->
-  <input type="hidden" name="formation" value="Développement Web">
-  <input type="hidden" name="niveau" value="Débutant">
-  <input type="hidden" name="duree" value="8 semaines">
-
-  <!-- Champ NOM -->
-  <div class="form-group">
-    <input type="text" name="nom" placeholder="Votre nom complet" required>
-  </div>
-
-  <!-- Champ CONTACT -->
-  <div class="form-group">
-    <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
-  </div>
-
-  <!-- Bouton -->
-  <button type="submit" class="btn btn-secondary">
-    S’inscrire
-  </button>
-
-</form>
+        <button class="btn btn-secondary" onclick="openForm('form3')">S’inscrire</button>
       </div>
+
     </div>
   </div>
 </section>
+
+<!-- MODALS POUR LES FORMULAIRES -->
+
+<!-- Formulaire 1 -->
+<div id="form1" class="modal-form">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeForm('form1')">&times;</span>
+    <h3>Inscription à Marketing Digital Avancé</h3>
+    <form action="https://formspree.io/f/TON_FORM_ID" method="POST">
+      <input type="hidden" name="formation" value="Marketing Digital Avancé">
+      <input type="hidden" name="niveau" value="Intermédiaire">
+      <input type="hidden" name="duree" value="6 semaines">
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Votre nom complet" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
+      </div>
+      <button type="submit" class="btn btn-primary">🆗 Envoyer</button>
+    </form>
+  </div>
+</div>
+
+<!-- Formulaire 2 -->
+<div id="form2" class="modal-form">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeForm('form2')">&times;</span>
+    <h3>Inscription à Développement Web</h3>
+    <form action="https://formspree.io/f/TON_FORM_ID" method="POST">
+      <input type="hidden" name="formation" value="Développement Web">
+      <input type="hidden" name="niveau" value="Débutant">
+      <input type="hidden" name="duree" value="8 semaines">
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Votre nom complet" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
+      </div>
+      <button type="submit" class="btn btn-primary">🆗 Envoyer</button>
+    </form>
+  </div>
+</div>
+
+<!-- Formulaire 3 -->
+<div id="form3" class="modal-form">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeForm('form3')">&times;</span>
+    <h3>Inscription à Stratégie B2B et Growth</h3>
+    <form action="https://formspree.io/f/TON_FORM_ID" method="POST">
+      <input type="hidden" name="formation" value="Stratégie B2B et Growth">
+      <input type="hidden" name="niveau" value="Avancé">
+      <input type="hidden" name="duree" value="4 semaines">
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Votre nom complet" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="contact" placeholder="Votre numéro WhatsApp" required>
+      </div>
+      <button type="submit" class="btn btn-primary">🆗 Envoyer</button>
+    </form>
+  </div>
+</div>
 
 <!-- CTA FINAL -->
 <section class="section cta-final">
@@ -157,9 +194,9 @@
     </div>
     <div>
       <h4>Contact</h4>
-      <p>Email: WoldjyImpactlab@gmail.com</p>
-      <p>Téléphone: +509 42006945/42824391</p>
-      <p>#28,rue du fort, petit-anse,Cap-Haïtien, Haïti</p>
+      <p>Email: contact@woldjyimpactlab.com</p>
+      <p>Téléphone: +509 42006945</p>
+      <p>Cap-Haïtien, Haïti</p>
     </div>
   </div>
 </footer>
