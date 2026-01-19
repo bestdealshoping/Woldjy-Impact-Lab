@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliothèque | Woldjy Impact Lab</title>
+<style>
+/* === Styles identiques à Woldjy Impact Lab === */
+body{font-family:Arial,sans-serif;margin:0;padding:0;color:#222;}
+header{background:#0d6efd;color:#fff;padding:10px 0;}
+header .container{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:auto;}
+header nav a{color:#fff;margin:0 10px;text-decoration:none;}
+header .btn-primary{background:#ffc107;color:#222;padding:8px 16px;border-radius:5px;text-decoration:none;}
+.hero{padding:80px 20px;text-align:center;background:#f4f6f8;}
+.hero h1{font-size:2em;margin-bottom:10px;}
+.hero p{font-size:1.1em;margin-bottom:20px;}
+.btn{padding:10px 18px;border:none;border-radius:5px;color:#fff;background:#0d6efd;cursor:pointer;text-decoration:none;}
+.footer{background:#222;color:#fff;padding:20px 0;}
+.footer a{color:#ffc107;text-decoration:none;margin-right:10px;}
+.hidden{display:none;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+<div class="container">
+  <div class="logo"><img src="images/hero/logo.png" alt="Woldjy Impact Lab" style="height:50px;"></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="offers.html">Formations</a>
+    <a href="acceuil_bibliotheque.html">Bibliothèque</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="audit.html" class="btn-primary">Demander un audit gratuit</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Bienvenue dans la Bibliothèque Woldjy Impact Lab</h1>
+<p>Accédez à nos ebooks et documents exclusifs. Connectez-vous pour commencer.</p>
+<a class="btn" onclick="goLogin()">Se connecter / S'enregistrer</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+  <p>© 2026 Woldjy Impact Lab. Tous droits réservés.</p>
+</div>
+</footer>
+
+<script>
+// Rediriger utilisateur vers login si pas connecté
+function goLogin(){
+  window.location.href='login.html';
+}
+</script>
+
+</body>
+</html>

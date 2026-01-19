@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription | Woldjy Impact Lab</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6f8;}
+header {background:#2196f3; color:#fff; padding:15px;}
+header .logo-img {height:50px;}
+header nav a {color:#fff; margin:0 10px; text-decoration:none;}
+.container {width:90%; max-width:600px; margin:50px auto;}
+h1 {color:#2196f3; text-align:center;}
+input {width:100%; padding:10px; margin:10px 0; box-sizing:border-box;}
+button {background:#ff5722; color:#fff; padding:10px 15px; border:none; cursor:pointer;}
+button:hover {opacity:0.85;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img src="images/hero/logo.png" alt="Woldjy Impact Lab" class="logo-img">
+  </div>
+</header>
+
+<div class="container">
+  <h1>Créer un compte</h1>
+  <div class="form-group">
+    <input type="text" id="name" placeholder="Nom complet">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="registerUser()">S'inscrire</button>
+  </div>
+  <p>Déjà inscrit ? <a href="login.html">Se connecter</a></p>
+</div>
+
+<script>
+function registerUser(){
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  if(name && email && password){
+    localStorage.setItem('userName', name);
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userPassword', password);
+    alert('Inscription réussie ! Connectez-vous maintenant.');
+    window.location.href='login.html';
+  } else { alert('Veuillez remplir tous les champs'); }
+}
+</script>
+
+</body>
+</html>

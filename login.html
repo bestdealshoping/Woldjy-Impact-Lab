@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion | Woldjy Impact Lab</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6f8;}
+header {background:#2196f3; color:#fff; padding:15px;}
+header .logo-img {height:50px;}
+.container {width:90%; max-width:600px; margin:50px auto;}
+h1 {color:#2196f3; text-align:center;}
+input {width:100%; padding:10px; margin:10px 0; box-sizing:border-box;}
+button {background:#ff5722; color:#fff; padding:10px 15px; border:none; cursor:pointer;}
+button:hover {opacity:0.85;}
+
+footer {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img src="images/hero/logo.png" alt="Woldjy Impact Lab" class="logo-img">
+  </div>
+</header>
+
+<div class="container">
+  <h1>Se connecter</h1>
+  <div class="form-group">
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Mot de passe">
+    <button onclick="loginUser()">Se connecter</button>
+  </div>
+  <p>Pas de compte ? <a href="register.html">S'inscrire</a></p>
+</div>
+
+<script>
+function loginUser(){
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+  const storedEmail = localStorage.getItem('userEmail');
+  const storedPassword = localStorage.getItem('userPassword');
+  if(email === storedEmail && password === storedPassword){
+    localStorage.setItem('loggedIn', 'true');
+    window.location.href='bibliotheque.html';
+  } else {
+    alert('Email ou mot de passe incorrect.');
+  }
+}
+</script>
+
+</body>
+</html>
